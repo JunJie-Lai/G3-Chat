@@ -57,3 +57,6 @@ Ensure your `.env` contains correct values for Google OAuth, Valkey, and other c
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
+
+📜 License
+MIT © [Jun Jie Lai](https://github.com/JunJie-Lai)
