@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS title
+(
+    id        BIGSERIAL PRIMARY KEY,
+    user_id   VARCHAR(255) NOT NULL,
+    title     VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
