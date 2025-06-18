@@ -38,16 +38,13 @@ export const authService = {
 
   /**
    * Handle Google OAuth callback
+   * @param token - The authentication token
    * @returns Promise with the user and session token
    */
-  handleGoogleCallback: async (): Promise<AuthResponse> => {
+  handleGoogleCallback: async (token: string): Promise<AuthResponse> => {
     try {
-      // Parse token from URL query parameters
-      const urlParams = new URLSearchParams(window.location.search);
-      const token = urlParams.get('token');
-
       if (!token) {
-        throw new Error('No token found in URL');
+        throw new Error('No token provided');
       }
 
       // Store token in localStorage

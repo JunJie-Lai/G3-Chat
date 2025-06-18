@@ -26,7 +26,7 @@ export default function AuthPage() {
         setIsLoading(true);
         try {
           // Handle the callback with the token
-          const response = await authService.handleGoogleCallback();
+          const response = await authService.handleGoogleCallback(token);
 
           // Update the user store
           setUser(response.user);
